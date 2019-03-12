@@ -14,6 +14,10 @@ The purpose of this document is to provide an example of how to extract data fro
 
 This code imports Landsat imagery of Injune in Queensland, Australia into R in raster format and prepares the data for statistical analyses.
 
+Note: I loaded the satellite image, example_raster.img, which is 493MB to github using Git large file storage (Git-lfs) which I set up on my local machine. For details on the Git-lfs see https://git-lfs.github.com/  
+
+
+Now, to the code.
 Require packages rgdal, sp, raster, rgeos.
 
 ```{r }
