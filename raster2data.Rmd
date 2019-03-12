@@ -10,7 +10,7 @@ output:
 knitr::opts_chunk$set(fig.width=12, fig.height=8, fig.path='Figs/',
                       results='hide', warning=FALSE, message=FALSE)
 ```
-The purpose of this document is to provide an example of how to extract data from a large image file to then fit statistical models and do your own analysis. Back when I first started working on these types of problems, I couldn't find clear answers to what I was asking online. I found my way through trial and plenty of error, and am sharing this so that it might answer the same questions for someone else.  
+The purpose of this document is to provide an example of how to extract data from a large image file to then fit statistical models and do your own analysis. Back when I first started working on these types of problems, I couldn't find clear answers to what I was asking online. I found my way through trial and plenty of error, and am sharing this so that it might answer the same questions for someone else.
 
 This code imports Landsat imagery of Injune in Queensland, Australia into R in raster format and prepares the data for statistical analyses.
 
@@ -116,6 +116,7 @@ Later in my analysis I will need the Coordinate Reference System (CRS) to extrac
 crs(img)
 ```
 Gives the crs arguments: +proj=utm +zone=55 +south +ellps=WGS84 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs. 
+
 I want to extract data from this image to run statistical analyses on a dataset in dataframe format.
 Create a data frame from the Injune raster - it includes the band values from Landsat bands 1-6.
 
