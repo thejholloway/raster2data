@@ -276,7 +276,7 @@ allvars <- cbind(data, ndvi.df[,1, drop=FALSE])
 ```
 I don't want to include any NDVI values less than 0, as these indicate the pixel is water and out of scope of this example. 
 
-Store all the observations with NDVI value greater than 1 in a dataframe called 'data.final'.
+Store all the observations with NDVI value greater than 0 in a dataframe called 'data.final'.
 
 ```{r }
 data.final <-subset(allvars, NDVI > 0)
