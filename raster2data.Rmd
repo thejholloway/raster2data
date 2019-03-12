@@ -271,6 +271,7 @@ Add NDVI to the data dataframe and call it allvars (all variables).
 allvars <- cbind(data, ndvi.df[,1, drop=FALSE])
 ```
 I don't want to include any NDVI values less than 0, as these indicate the pixel is water and out of scope of this example. 
+
 Store all the observations with NDVI value greater than 1 in a dataframe called 'data.final'.
 
 ```{r }
@@ -302,7 +303,7 @@ summary(data.final) #' Confirms minimum value of NDVI is zero
 ```
 
 Manually calculated NDVI and values are correct. 
-Create a variable called class based on the ndvi.df dataframe, which gives land cover category based on NDVI cut off values.
+Create a variable called class based on the ndvi.df dataframe, which gives land cover category based on NDVI cut off values. I am using 0.4 as an example, but you could set other thresholds based on remote sensing rules or your own preferences.
 
 ```{r }
 class <-c(ifelse(data.final$NDVI >0.4,"Forest","Pasture"))
